@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   History
+{% endblock %}
+
+{% block main %}
+<div class="hola form-group d-flex justify-content-center">
+  <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Time</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for i in history %}
+
+
+                <tr>
+                    <td>{{ i.stock }}</td>
+                    <td>{{ i.shares }}</td>
+                    <td>{{i.price}}</td>
+                    <td>{{ i.time }}</td>
+
+
+                </tr>
+
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+<div class="form-group d-flex justify-content-center">
+  <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for i in range(j) %}
+                {% if shares[i] > 0 %}
+
+                <tr>
+                    <td>{{ ticket[i].stock }}</td>
+                    <td>{{ names[i] }}</td>
+                    <td>{{ shares[i]}}</td>
+                    <td>{{ price[i] }}</td>
+                    <td>{{ total[i] }}</td>
+
+                </tr>
+                {%endif%}
+            {% endfor %}
+            <tr>
+
+                    <td>CASH</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{cash[0]}} </td>
+
+
+            </tr>
+            <tr>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{total1}}</td>
+
+
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+
+{% endblock %}
